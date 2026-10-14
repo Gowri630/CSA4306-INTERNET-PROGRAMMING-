@@ -1,0 +1,1 @@
+<?php require '../database.php';require_admin();$id=(int)($_GET['id']??0);$s=$conn->prepare("DELETE FROM books WHERE id=? AND available=quantity");$s->bind_param("i",$id);$s->execute();header("Location: books.php");exit;?>
