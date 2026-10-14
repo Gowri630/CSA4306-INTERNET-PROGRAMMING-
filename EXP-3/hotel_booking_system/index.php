@@ -1,0 +1,10 @@
+<?php include "db.php"; ?>
+<!DOCTYPE html><html><head><title>StayEase Hotel Booking</title><link rel="stylesheet" href="style.css"></head><body>
+<header><h1>StayEase Hotels</h1><nav><a href="index.php">Home</a><a href="rooms.php">Rooms</a><a href="register.php">Register</a><a href="login.php">Login</a><a href="my_bookings.php">My Bookings</a><a href="admin.php">Admin</a></nav></header>
+<section class="hero"><h2>Find your comfortable stay</h2><p>Search room types, check availability, and book your next stay in a few simple steps. Explore affordable rooms with clear prices and essential amenities.</p><a class="btn" href="rooms.php">Explore Rooms</a> <a class="btn" href="register.php">Create Account</a></section>
+<div class="container"><h2>Our Room Types</h2><div class="grid">
+<div class="room"><h3>Standard Room</h3><p>Comfortable room for solo travellers or couples.</p><b>₹1,500 / night</b></div>
+<div class="room"><h3>Deluxe Room</h3><p>Extra space, air conditioning, Wi-Fi and breakfast.</p><b>₹2,500 / night</b></div>
+<div class="room"><h3>Family Room</h3><p>Spacious room suitable for families and groups.</p><b>₹3,500 / night</b></div>
+<div class="room"><h3>Suite</h3><p>Premium room with a sitting area and added comfort.</p><b>₹5,000 / night</b></div>
+</div><div class="card"><h2>About Us</h2><p>StayEase is a simple hotel booking website designed to help guests browse room options and manage reservations online.</p><h3>Contact Us</h3><p>Email: support@stayease.example | Phone: +91 98765 43210</p><h3>Customer Service Q&amp;A</h3><p><b>Can I cancel?</b> Yes, eligible bookings can be cancelled at least 3 days before arrival.</p><p><b>How do I see my reservations?</b> Log in and open My Bookings.</p><h3>Local Travel Guide</h3><p>Check local transport, restaurants, and attractions before travelling. Contact the hotel team for directions.</p><h3>Privacy Policy</h3><p>Your account and booking details are used to manage reservations. Do not share your password with anyone.</p></div></div><footer>StayEase Hotels · Responsive Hotel Booking Demo</footer></body></html>
