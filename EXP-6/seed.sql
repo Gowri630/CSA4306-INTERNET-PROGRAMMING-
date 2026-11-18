@@ -1,0 +1,4 @@
+USE `02_cake_ordering_db`;
+INSERT INTO cakes (name,flavour,category,price,stock,description) VALUES
+('Velvet Rose Cake','Red Velvet','Birthday',899,20,'A soft red velvet cake finished with cream cheese frosting.'), ('Midnight Chocolate','Chocolate','Celebration',1099,15,'Rich chocolate sponge with glossy ganache.'), ('Berry Cloud','Vanilla Berry','Anniversary',1299,12,'Vanilla layers with fresh berry cream.'), ('Golden Mango','Mango','Summer',999,10,'Mango mousse cake with a light sponge base.'), ('Little Sprinkles','Vanilla','Kids',699,25,'Vanilla buttercream cake with colourful sprinkles.'), ('Classic Black Forest','Chocolate Cherry','Birthday',849,18,'Chocolate sponge, cream and cherry layers.');
+-- Admin user is created by visiting setup_admin.php after importing schema.sql and seed.sql.

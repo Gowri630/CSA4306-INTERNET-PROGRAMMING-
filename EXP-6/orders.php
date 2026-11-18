@@ -1,0 +1,1 @@
+<?php require_once 'db.php'; require_login(); go('my_bookings.php'); ?>
