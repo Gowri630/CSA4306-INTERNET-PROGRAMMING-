@@ -1,0 +1,4 @@
+<?php require_once __DIR__.'/db.php'; $notice=flash(); ?>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title><?= h($page_title ?? 'SkyRoute') ?> · SkyRoute</title><link rel="stylesheet" href="style.css"></head><body>
+<header class="topbar"><div class="wrap nav"><a class="brand" href="index.php">SkyRoute<span>●</span></a><nav class="links"><a href="index.php">Home</a><a href="search.php">Search Flights</a><a href="my_bookings.php">My Tickets</a><a href="feedback.php">Feedback</a><a href="feedback.php">Feedback</a><?php if(logged_in()): ?><a href="logout.php">Logout</a><?php else: ?><a href="login.php">Sign in</a><?php endif; ?><?php if(is_admin()): ?><a href="admin.php">Admin</a><?php endif; ?></nav></div></header>
+<main class="wrap"><?php if($notice): ?><div class="notice"><?= h($notice) ?></div><?php endif; ?>

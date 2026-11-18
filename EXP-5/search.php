@@ -1,0 +1,9 @@
+<?php require_once 'db.php'; $page_title='Search Flights'; $origin=trim($_GET['origin']??''); $destination=trim($_GET['destination']??''); $date=trim($_GET['date']??'');
+$sql="SELECT * FROM flights WHERE 1=1"; $args=[];
+if($origin!==''){$sql.=" AND origin LIKE ?";$args[]="%$origin%";}
+if($destination!==''){$sql.=" AND destination LIKE ?";$args[]="%$destination%";}
+if($date!==''){$sql.=" AND flight_date=?";$args[]=$date;}
+$q=db()->prepare($sql." ORDER BY flight_date");$q->execute($args);$items=$q->fetchAll(); include 'header.php'; ?>
+<section class="section"><div class="eyebrow">ROUTE FINDER</div><h1 style="font-size:3rem">Find your flight.</h1><p class="muted">Filter available demo flights by route and travel date.</p>
+<form class="searchbar" method="get"><input name="origin" placeholder="From city" value="<?= h($origin) ?>"><input name="destination" placeholder="To city" value="<?= h($destination) ?>"><input type="date" name="date" value="<?= h($date) ?>"><select name="class"><option>Any class</option><option>Economy</option><option>Business</option><option>Premium Economy</option></select><button class="btn">Search</button></form>
+<div class="section-head" style="margin-top:35px"><h2>Available flights</h2><span class="tag"><?= count($items) ?> options</span></div><div class="grid"><?php foreach($items as $it): ?><article class="card"><div class="card-top">✈️</div><div class="card-body"><span class="tag"><?= h($it['flight_code']) ?></span><h3><?= h($it['origin']) ?> → <?= h($it['destination']) ?></h3><p class="muted"><?= h($it['flight_date']) ?> · <?= h($it['cabin_class']) ?></p><p class="muted"><?= (int)$it['seats_available'] ?> seats listed as available</p><div class="price">₹<?= number_format($it['fare'],0) ?></div><a class="btn" href="book.php?id=<?= (int)$it['id'] ?>">Select flight</a></div></article><?php endforeach; ?></div></section><?php include 'footer.php'; ?>

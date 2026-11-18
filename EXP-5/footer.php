@@ -1,0 +1,1 @@
+</main><footer class="footer"><div class="wrap"><strong>SkyRoute</strong><p>Internet Programming Lab · PHP + MySQL demo running locally on XAMPP.</p><p class="small">Demo project only. Payment and email integrations are simulated; do not enter real payment or sensitive personal data.</p></div></footer></body></html>
